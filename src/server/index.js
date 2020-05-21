@@ -6,8 +6,10 @@ const SERVER_PORT = 4232
 
 app.use(express.json())
 
-app.get('/api/wild-pokemon', caughtCtrl.getThreeRandomPokemon)
+app.get('/api/wild-pokemon', wildCtrl.getThreeRandomPokemon)
+
 app.get('/api/pokemon', caughtCtrl.catchPokemon)
+// app.post()
 app.put('/api/pokemon/:pokemon_id', caughtCtrl.editPokemonName)
 app.delete('/api/pokemon/:pokemon_id', caughtCtrl.deletePokemon)
 
